@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:17:06 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/09 20:48:40 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/09 20:52:57 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ Zombie::~Zombie()
 /// and a message to the console.
 void	Zombie::announce() const
 {
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << name << ": BraiiiiiiinnnzzzZ... " << std::endl;
 }
