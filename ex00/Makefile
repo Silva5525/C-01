@@ -6,7 +6,7 @@
 #    By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 18:09:33 by wdegraf           #+#    #+#              #
-#    Updated: 2024/11/09 11:34:41 by wdegraf          ###   ########.fr        #
+#    Updated: 2024/11/09 17:17:41 by wdegraf          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC := $(wildcard *.cpp)
 HEADS := $(wildcard *.hpp)
 
 CC := c++
-CPPFLAGS := -std=c++17 -Wall -Wextra -Werror
+CPPFLAGS := -std=c++98 -Wall -Wextra -Werror
 
 all: $(NAME)
 
