@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:16:45 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/09 20:34:45 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/09 20:57:20 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ class Zombie
 		void	setName(std::string name);
 };
 
-Zombie* newZombie(std::string name);
 Zombie*	zombieHorde(int N, std::string name);
 void	randomChump(std::string name);
 
