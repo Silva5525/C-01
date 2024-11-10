@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:16:45 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/10 15:47:11 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/10 15:47:09 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
 # include <string>
 # include <iostream>
 
-/// @brief The Zombie class for the Zombie object.
-/// @brief New in C++:
-/// private: name
-/// public: the constructor, destructor, and announce function.
-class Zombie
+# include "Weapon.hpp"
+
+/// @brief The HumanA class has always a weapon.
+/// private are name and a reference to a weapon.
+/// public is the constructor and the attack function.
+/// Since HumanA has allways a weapon, we use a reference
+/// to a weapon to make sure weapon is never NULL.
+class HumanA
 {
 	private:
 		std::string	name;
+		Weapon&		weapon;
 	
 	public:
-		Zombie();
-		Zombie(std::string name);
-		~Zombie();
-		void	announce() const;
-		void	setName(std::string name);
+		HumanA(const std::string name, Weapon& weapon);
+		void	attack() const;
 };
-
-Zombie*	zombieHorde(int N, std::string name);
-void	randomChump(std::string name);
 
 #endif
