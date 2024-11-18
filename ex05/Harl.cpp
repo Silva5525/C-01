@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:23:59 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/14 17:45:24 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/14 22:25:19 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	Harl::error(void)
 {
 	std::cout << "ERROR:\n This is unacceptable! I want to speak to the manager now." << std::endl;
 }
-
 
 /// @brief Harl complains in different levels of whining.
 /// @param whining the level of whining. (DEBUG, INFO, WARNING, ERROR)
