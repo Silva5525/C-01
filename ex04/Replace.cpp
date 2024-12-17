@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:17:06 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/14 16:15:03 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/12/17 16:17:42 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 /// @param npos const std::string::size_type notFound = std::string::npos;
 /// is a constant that represents the maximum value for size_t. It is used
 /// to indicate that the string::find() function did not find the substring.
+/// @attention std::find(for container) && std::string::find (for string) are difrent
+/// functions/in difrent librarys. (Google it!) )
 void	myReplace(const std::string& l, const std::string& s1,
 			const std::string& s2, std::ofstream& outfile)
 {
@@ -44,5 +46,5 @@ void	myReplace(const std::string& l, const std::string& s1,
 		out += l.substr(pos, next - pos) + s2;
 		pos = next + s1.length();
 	}
-	outfile << out << '\n';
+	outfile << out;
 }

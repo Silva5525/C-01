@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 14:49:01 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/14 16:14:46 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/12/17 16:33:53 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ int	main(int argc, char **argv)
 	std::string		fl = argv[1];
 	std::string		s1 = argv[2];
 	std::string		s2 = argv[3];
-	std::string		l;
 	std::ifstream	infile;
 	std::ofstream	outfile;
 	
@@ -71,8 +70,11 @@ int	main(int argc, char **argv)
 	}
 	if (!handle_file(fl, infile, outfile))
 		return (1);
-	while (std::getline(infile, l))
-		myReplace(l, s1, s2, outfile);
+	std::ostringstream outStringStream;
+	outStringStream << infile.rdbuf();
+	std::string fileText = outStringStream.str();
+	
+	myReplace(fileText, s1, s2, outfile);
 	infile.close();
 	outfile.close();
 	return (0);
